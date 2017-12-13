@@ -1,20 +1,21 @@
 'use strict';
+console.log('book-view.js');
 
-let app = app || {};
+var app = app || {};
 
 (function(module) {
   const bookView = {};
 
   bookView.initIndexPage = function() {
     $('.container').hide();
-    $('.book-view').show();
-    // let template = Handlebars.compile($('#error-template').text());
+    $('.books-view').show();
     app.Book.all.map(book => $('#book-list').append(book.toHtml()));
+    console.log(app.Book.all);
   };
 
   module.bookView = bookView;
 })(app);
 
-$(function() {
+$(document).ready(function() {
   app.Book.fetchAll(app.bookView.initIndexPage);
 });
