@@ -1,0 +1,7 @@
+.form-view input {
+  display: block;
+  /* text-align: center; */
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 270px;
+}
