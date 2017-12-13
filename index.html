@@ -12,38 +12,46 @@
 
     <title>Book List</title>
 
-    <script id="book-list-template" type="text/x-handlebars-template">
-      <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
-        <header>
-          <h1>{{title}}</h1>
-          <div class="byline">
-            By {{author}} ISNB:{{isbn}}
-            <a href="{{image_url}}"></a>
-          </div>
-        </header>
+    <script type="text/x-handlebars-template" id="error-templage">
+        <p>Oops you gotta problem!</p>
+        <p>{{status}}: {{statusText}}</p>
+    </script>
+
+    <script id="book-list-template" type="text/x-handlebars-template" id="book-list-template">
+        <li class="book-items" data-bookid="{{book_id}}">
+            <div class="book-container">
+                <img src="{{image_url}}">
+                <div class="book-info">
+                    <h3>{{Title}}</h3>
+                    <h4>Brought to you by {{author}}</h4>
+                </div>
+            </div>
+        </li>
         <section class="book-description">{{{description}}}</section>
       </article>
     </script>
 </head>
 <body>
-    <h1>hello world</h1>
+    <div class="error-view container">
+        <p class="view">Oops you gotta problem!</p>
+        <section id="error-message"></section>
+    </div>
 
-    <section class="book-view">
-        <ul>
-
-        </ul>
-    </section>
-
-    <section class="about-view">
-        <ul>
-
-        </ul>
-    </section>
+    <div class="about-view container">
+        <p class="view">Books</p>
+        <section class="book-list">
+            <ul id="book-list"></ul>
+        </section>
+    </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+
+    <script src="../book-list-client/models/book.js"></script>
+    <script src="../book-list-client/views/book-view.js"></script>
+    <script src="../book-list-client/views/error-view.js"></script>
     <script src="../book-list-server/server.js"></script>
 </body>
 </html>
