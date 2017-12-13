@@ -1,16 +1,16 @@
 'use strict';
 
-let errorView = {};
+let app = app || {};
 
-errorVew.prototype.initErrorPage = (err) => {
-  $('.container').hide();
-  $('.error-view').show();
-  $('#error-message').empty();
-  let template = Handlebars.compile($('#error-template').text(err));
-  $('#error-message').append(template);
-};
+(function (module) {
+  const errorView = {};
 
-function errorCallback(err) {
-  console.error(err);
-  errorView.initErrorPage(err);
-}
+  errorView.initErrorPage = function(err) {
+    $('.container').hide();
+    $('.error-view').show();
+    $('#error-message').empty();
+    let template = Handlebars.compile($('#error-template').text());
+    $('#error-message').append(template(err));
+  };
+  module.errorView = errorView;
+})(app)
