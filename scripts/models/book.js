@@ -1,9 +1,11 @@
 'use strict';
+console.log('book.js')
 
-let app = app || {};
-let __API_URL__ = 'hptt://localhost:3000'; //can also make it the deployed version which would be heroku_
+var app = app || {};
+var __API_URL__ = 'http://localhost:3000'; //can also make it the deployed version which would be heroku_
 
 (function(module) {
+
   function errorCallback(err) {
     console.error(err);
     module.errorView.initErrorPage(err);
@@ -13,15 +15,19 @@ let __API_URL__ = 'hptt://localhost:3000'; //can also make it the deployed versi
     Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
   }
 
-  Book.toHtml = function () {
+  Book.prototype.toHtml = function () {
     let template = Handlebars.compile($('#book-list-template').text());
     return template(this);
   };
 
   Book.all = [];
-  Book.loadAll = rows => Book.all = rows.sort((a, b) => b.title - a.title).map(bookObject => new Book(bookObject));
+  Book.loadAll = function (rows) {
+    console.log(rows);
+    Book.all = rows.sort((a, b) => b.title - a.title).map(bookObject => new Book(bookObject));
+    console.log(Book.all);
+  };
 
-  Book.fetchOne = function () {
+  Book.prototype.fetchOne = function () {
     $.get(`${__API_URL__}/api/v1/book/:id`)
       .then(data => Book.loadAll(data))
       .then(callback)
@@ -40,7 +46,7 @@ let __API_URL__ = 'hptt://localhost:3000'; //can also make it the deployed versi
       .then(data => {
         console.log(data);
         if (callback) callback();
-      })
+      });
   };
   module.Book = Book;
 })(app);

@@ -1,6 +1,7 @@
 'use strict';
+console.log('error-view.js');
 
-let app = app || {};
+var app = app || {};
 
 (function (module) {
   const errorView = {};
@@ -13,4 +14,4 @@ let app = app || {};
     $('#error-message').append(template(err));
   };
   module.errorView = errorView;
-})(app)
+})(app);

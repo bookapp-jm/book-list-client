@@ -22,7 +22,7 @@
         <p>{{status}}: {{statusText}}</p>
     </script>
 
-    <script id="book-list-template" type="text/x-handlebars-template" id="book-list-template">
+    <script id="book-list-template" type="text/x-handlebars-template">
         <li class="book-items" data-bookid="{{book_id}}">
             <div class="book-container">
                 <img src="{{image_url}}">
@@ -37,62 +37,71 @@
     </script>
 </head>
 <body>
-    <div class="error-view container">
-        <p class="view">Oops you gotta problem!</p>
-        <section id="error-message"></section>
-    </div>
+    <header>
+        <nav></nav>
 
-    <div class="about-view container">
-        <p class="view">Some Books</p>
-        <section class="book-list">
-            <ul id="book-list"></ul>
+    </header>
+
+    <main>
+        <div class="error-view container">
+            <p class="view">Oops you gotta problem!</p>
+            <section id="error-message"></section>
+        </div>
+
+        <div class="books-view container">
+            <p class="view">Some Books</p>
+            <section class="book-list">
+                <ul id="book-list"></ul>
+            </section>
+        </div>
+
+        <div class="book-view container">
+            <p class="view">Book Detail</p>
+            <section id="book-detail"></section>
+        </div>
+
+        <div class="form-view container">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </div>
+
+        <section id="write" class="tab-content">
+            <h1>New Book</h1>
+            <form action="#" id="new-form">
+                <label>
+                    <input type="text" id="book-title" placeholder="Title" required>
+                </label>
+
+                <label>
+                    <input type="text" id="book-author" placeholder="Author Name" required>
+                </label>
+
+                <label>
+                    <input type="text" id="book-isbn" placeholder="ISBN" required>
+                </label>
+
+                <label>
+                    <input type="text" id="book-image-url" placeholder="Image URL" required>
+                </label>
+
+                <textarea id="book-description" rows="8" cols="40" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
         </section>
-    </div>
-
-    <div class="detail-view container">
-        <p class="view">Book Detail</p>
-        <section id="book-detail"></section>
-    </div>
-
-    <div class="form-view container">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-    </div>
-
-    <section id="write" class="tab-content">
-        <h1>New Book</h1>
-        <form action="#" id="new-form">
-            <label>
-                <input type="text" id="book-title" placeholder="Title" required>
-            </label>
-
-            <label>
-                <input type="text" id="book-author" placeholder="Author Name" required>
-            </label>
-
-            <label>
-                <input type="text" id="book-isbn" placeholder="ISBN" required>
-            </label>
-
-            <label>
-                <input type="text" id="book-image-url" placeholder="Image URL" required>
-            </label>
-
-            <textarea id="book-description" rows="8" cols="40" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-
+    </main>
     
+    <!--jQuery and Handlebars-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 
+    <!--client scripts-->
     <script src="./scripts/models/book.js"></script>
     <script src="./scripts/views/book-view.js"></script>
     <script src="./scripts/views/error-view.js"></script>
-    <script src="./scripts/views/routes.js"></script>
+    <!-- <script src="./scripts/views/routes.js"></script> -->
+
+    <script>app.bookView.initIndexPage()</script>
 </body>
 </html>
