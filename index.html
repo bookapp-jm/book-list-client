@@ -34,21 +34,41 @@
                 </div>
             </div>
         </li>
-        <section class="book-description">{{{description}}}</section>
-      </article>
     </script>
 
     <script type="text/x-handlebars-template" id="book-detail-template">
-
+        <li class="book-items" data-bookid="{{book_id}}">
+            <div class="book-container">
+                <img src="{{img_url}}">
+                <div class="book-info">
+                    <h3>{{title}}</h3>
+                    <p>from {{author}}</p>
+                    <p>ISBN: {{isbn}}</p>
+                    <section class="book-description">{{{description}}}</section>
+                </div>
+            </div>
+        </li>
     </script>
 
 </head>
 <body>
     <header>
-        <nav>
-            <img id="codefellows" src="">
+        <!-- <div class="icon-menu">
+            <img id="codefellows" src="http://www.bootcamps.in/wp-content/uploads/2015/06/code-fellows-shield.png">
             <h1>Book App</h1>
-            <span class="icon-menu"></span>
+        </div> -->
+
+        <nav class="nav-links">
+          <div>
+            <img id="codefellows" src="http://www.bootcamps.in/wp-content/uploads/2015/06/code-fellows-shield.png">
+            <h1>Book App</h1>
+          </div>
+          <div class="icon-menu">
+              <ul id="menu">
+                  <a href="/"><li class="icon-menu">home</li>
+                  <a href="/books/new"><li class="icon-menu">new book</li>
+              </ul>
+          </div>
         </nav>
     </header>
 
@@ -70,9 +90,9 @@
             <section id="book-detail"></section>
         </div>
 
-        <section id="write" class="tab-content">
+        <section id="write" class="create-book">
             <h1>New Book</h1>
-            <form action="#" id="new-form">
+            <form action="#" id="new-book">
                 <label>
                     <input type="text" id="book-title" placeholder="Title" required>
                 </label>

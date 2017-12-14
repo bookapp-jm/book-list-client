@@ -3,26 +3,34 @@ a {
 }
 
 @media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 600px) {
+  /* and (min-device-width: 320px) */
+  and (min-width: 600px) {
+    body {
+    text-align: center;
+  }
 
 }
 
-html {
-
+body {
+  background-color: #d9d9d9;
 }
 
 header {
   background-color: #646464;
   padding: 10px;
+  height: 50px;
 }
 
 header img {
   margin-right: 8px;
+  float: left;
+  width: 25px;
 }
 
 header h1 {
   text-align: center;
+  float: left;
+  margin-top: 8px;
   display: inline-block;
 }
 
@@ -34,17 +42,25 @@ header span {
 
 .icon-menu:before {
   content: "\2630";
-  margin-left: 195px;
+  margin-left: 468px;
+  margin-top: 7px;
+  position: absolute;
+  /* transition: 2s; */
 }
 
 .codefellows {
   margin-left: 20px;
 }
 
-body {
-  text-align: center;
-  background-color: #d9d9d9;
-}
+/* textarea {
+  display: block;
+  margin: 0 auto;
+  margin-left: 9px;
+  width: 95%;
+  border-radius: 3px;
+  border: solid 2px;
+  border-color: black;
+} */
 
 footer {
   text-align: center;
@@ -55,9 +71,13 @@ button {
   background-color: #4A4A4A;
   color: white;
   display: block;
-  margin-left: 245px;
+  margin-bottom: 50px;
+  margin-left: 486px;
   border-radius: 3px;
   border: solid 2px;
   border-color: #4A4A4A;
   margin-top: 10px;
+  width: 100px;
+  height: 30px;
+
 }

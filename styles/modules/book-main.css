@@ -1,0 +1,17 @@
+.book-container {
+  text-align: center;
+}
+
+.view {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.create-book h1 {
+  text-align: center;
+}
+
+.book-items {
+  margin-bottom: 20px;
+}

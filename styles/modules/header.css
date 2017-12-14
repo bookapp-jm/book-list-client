@@ -1,0 +1,14 @@
+.home{
+  margin-right: 100px;
+  padding: 11px;
+}
+
+.newBook {
+  float: right;
+  margin-top: -27px;
+  margin-right: 65px;
+}
+
+.icon-menu li {
+  display: none;
+}
