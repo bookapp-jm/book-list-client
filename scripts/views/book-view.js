@@ -29,27 +29,26 @@ var app = app || {};
   };
 
   bookView.initFormPage = function() {
-    $('container').hide();
+    $('.container').hide();
     $('.nav-menu').slideDown(750);
     $('.create-book').show();
     $('#new-book').on('submit', function(e){
       e.preventDefault();
-      
+      console.log('****', e);
       let book = {
         title: e.target.title.value,
         author: e.target.author.value,
         isbn: e.target.isbn.value,
-        title: e.target.title.value,
-        title: e.target.title.value,
-      }
-    })
+        image_url: e.target.image_url.value,
+        description: e.target.description.value
+      };
+      console.log('book', book);
+      app.Book.create(book);
+    });
   };
 
   module.bookView = bookView;
 })(app);
-
-
-
 
 
 $(document).ready(function() {

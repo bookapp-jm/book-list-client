@@ -27,9 +27,9 @@ var __API_URL__ = 'http://localhost:3000'; //can also make it the deployed versi
     console.log(Book.all);
   };
 
-  Book.fetchOne = function (ctx, callback) {
+  Book.fetchOne = function (ctx, callback) { //ctx, callback B/C in routes.js fetchone defined as having a callback
     $.get(`${__API_URL__}/api/v1/books/${ctx.params.book_id}`)
-      .then(data => Book.loadAll(data))
+      .then(results => ctx.book = results[0])
       .then(callback)
       .catch(err => errorCallback(err));
   };
