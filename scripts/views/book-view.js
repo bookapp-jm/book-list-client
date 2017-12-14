@@ -32,7 +32,17 @@ var app = app || {};
     $('container').hide();
     $('.nav-menu').slideDown(750);
     $('.create-book').show();
-    $('.nav-menu') ///////////////
+    $('#new-book').on('submit', function(e){
+      e.preventDefault();
+      
+      let book = {
+        title: e.target.title.value,
+        author: e.target.author.value,
+        isbn: e.target.isbn.value,
+        title: e.target.title.value,
+        title: e.target.title.value,
+      }
+    })
   };
 
   module.bookView = bookView;

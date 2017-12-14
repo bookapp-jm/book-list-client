@@ -9,6 +9,7 @@ a {
 }
 
 html {
+
 }
 
 header {
@@ -16,9 +17,19 @@ header {
   padding: 10px;
 }
 
+header img {
+  margin-right: 8px;
+}
+
 header h1 {
   text-align: center;
   display: inline-block;
+}
+
+header span {
+  display: inline;
+  float: right;
+  margin-right: -5px;
 }
 
 .icon-menu:before {
@@ -41,6 +52,12 @@ footer {
 }
 
 button {
+  background-color: #4A4A4A;
+  color: white;
   display: block;
   margin-left: 245px;
+  border-radius: 3px;
+  border: solid 2px;
+  border-color: #4A4A4A;
+  margin-top: 10px;
 }
