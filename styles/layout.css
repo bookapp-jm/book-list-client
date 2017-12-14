@@ -4,14 +4,18 @@
   margin-top: 20px;
   margin-bottom: 20px;
   width: 270px;
+  border-radius: 3px;
+  border-color: black;
 }
 
-#text-area {
+#book-description {
   display: block;
   margin: 0 auto;
-  margin-left: 75px;
+  margin-left: 21px;
   width: 270px;
-  border: solid 1px;
+  border-radius: 3px;
+  border: solid 2px;
+  border-color: black;
 }
 
 #write h1 {
