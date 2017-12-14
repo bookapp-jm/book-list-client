@@ -88,26 +88,26 @@
             <section id="book-detail"></section>
         </div>
 
-        <section id="write" class="create-book">
+        <section id="write" class="create-book container">
             <h1>New Book</h1>
             <form action="#" id="new-book">
                 <label>
-                    <input type="text" id="book-title" placeholder="Title" required>
+                    <input type="text" id="book-title" name="title" placeholder="Title" required>
                 </label>
 
                 <label>
-                    <input type="text" id="book-author" placeholder="Author Name" required>
+                    <input type="text" id="book-author" name="author" placeholder="Author Name" required>
                 </label>
 
                 <label>
-                    <input type="text" id="book-isbn" placeholder="ISBN" required>
+                    <input type="text" id="book-isbn" name="isbn" placeholder="ISBN" required>
                 </label>
 
                 <label>
-                    <input type="text" id="book-image-url" placeholder="Image URL" required>
+                    <input type="text" id="book-image-url" name="image_url" placeholder="Image URL" required>
                 </label>
 
-                <textarea id="book-description" rows="8" cols="40" required></textarea>
+                <textarea id="book-description" name="description" rows="8" cols="40" required></textarea>
                 <button type="submit">Submit</button>
             </form>
         </section>
