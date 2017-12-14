@@ -41,13 +41,12 @@ var __API_URL__ = 'http://localhost:3000'; //can also make it the deployed versi
       .catch(err => errorCallback(err));
   };
 
-  Book.prototype.create = function (callback) {
-    $.post('/articles', { author: this.author, authorUrl: this.authorUrl, body: this.body, category: this.category, publishedOn: this.publishedOn, title: this.title })
-      .then(data => {
-        console.log(data);
-        if (callback) callback();
-      });
+  Book.create = function (book) {
+    $.post(`${__API_URL__}/api/v1/books`, book)
+      .then(() => page('/'))
+      .catch(err => errorCallback(err));
   };
+
   module.Book = Book;
 })(app);
 
