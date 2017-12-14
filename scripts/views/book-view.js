@@ -13,8 +13,18 @@ var app = app || {};
     console.log(app.Book.all);
   };
 
+  bookView.initCreateFormPage = function() {
+    resetView();
+    $('.book-view').show();
+    $('.nav-menu') ///////////////
+  }
+
   module.bookView = bookView;
 })(app);
+
+
+
+
 
 $(document).ready(function() {
   app.Book.fetchAll(app.bookView.initIndexPage);

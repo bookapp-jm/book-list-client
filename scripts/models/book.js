@@ -27,8 +27,8 @@ var __API_URL__ = 'http://localhost:3000'; //can also make it the deployed versi
     console.log(Book.all);
   };
 
-  Book.prototype.fetchOne = function () {
-    $.get(`${__API_URL__}/api/v1/book/:id`)
+  Book.fetchOne = function (ctx, callback) {
+    $.get(`${__API_URL__}/api/v1/books/${ctx.params.book_id}`)
       .then(data => Book.loadAll(data))
       .then(callback)
       .catch(err => errorCallback(err));

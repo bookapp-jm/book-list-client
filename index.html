@@ -18,24 +18,30 @@
 
     <title>Book List</title>
 
-    <script type="text/x-handlebars-template" id="error-templage">
+    <script type="text/x-handlebars-template" id="error-template">
         <p>Oops you gotta problem!</p>
         <p>{{status}}: {{statusText}}</p>
     </script>
 
-    <script id="book-list-template" type="text/x-handlebars-template">
+    <script type="text/x-handlebars-template" id="book-list-template">
         <li class="book-items" data-bookid="{{book_id}}">
             <div class="book-container">
                 <img src="{{image_url}}">
                 <div class="book-info">
-                    <h3>{{Title}}</h3>
-                    <h4>Brought to you by {{author}}</h4>
+                    <h3>{{title}}</h3>
+                    <p>from {{author}}</p>
+                    <a href="/books/{{book_id}}">(づ￣ ³￣)づ</a>
                 </div>
             </div>
         </li>
         <section class="book-description">{{{description}}}</section>
       </article>
     </script>
+
+    <script type="text/x-handlebars-template" id="book-detail-template">
+    
+    </script>
+
 </head>
 <body>
     <header>
@@ -99,12 +105,13 @@
     <!--jQuery and Handlebars-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
     <!--client scripts-->
     <script src="./scripts/models/book.js"></script>
     <script src="./scripts/views/book-view.js"></script>
     <script src="./scripts/views/error-view.js"></script>
-    <!-- <script src="./scripts/views/routes.js"></script> -->
+    <script src="./scripts/views/routes.js"></script>
 
     <script>app.bookView.initIndexPage()</script>
 </body>
