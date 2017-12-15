@@ -1,8 +1,9 @@
 'use strict';
-console.log('book.js')
+console.log('book.js');
 
 var app = app || {};
-var __API_URL__ = 'http://localhost:3000'; //can also make it the deployed version which would be heroku_
+// var __API_URL__ = 'http://localhost:3000'; //can also make it the deployed version which would be heroku_
+var __API_URL__ = 'https://js-mm-booklist.herokuapp.com/';
 
 (function(module) {
 
