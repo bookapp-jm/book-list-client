@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/modules/footer.css"></link>
     <link rel="stylesheet" href="styles/modules/form-main.css"></link>
     <link rel="stylesheet" href="styles/modules/header.css"></link>
+    <link rel="stylesheet" href="styles/hamburger.css"></link>
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
 
@@ -55,10 +56,34 @@
 
 <body>
     <header>
-        <div class="icon-menu">
+        <div>
             <img id="codefellows" src="http://www.bootcamps.in/wp-content/uploads/2015/06/code-fellows-shield.png">
             <h1>Book App</h1>
-        </div>
+            <!-- <div class="icon-menu">
+              <nav class="nav-links">
+                  <ul>
+                      <li>
+                          <a href="/">home</a>
+                      </li>
+                      <li>
+                          <a href="/books/new">new book</a>
+                      </li>
+                  </ul>
+              </nav>
+            </div> -->
+            <div class="hamburger" id="menu-button">
+              <div id="line-1"></div>
+              <div id="line-2"></div>
+              <div id="line-3"></div>
+            </div>
+            <div id="menu">
+              <li>
+                  <a href="/">home</a>
+              </li>
+              <li>
+                  <a href="/books/new">new book</a>
+              </li>
+            </div>
 
         <nav class="nav-links">
             <ul>
@@ -128,6 +153,7 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
     <!--client scripts-->
+    <script src="./scripts/views/hamburger.js"></script>
     <script src="./scripts/models/book.js"></script>
     <script src="./scripts/views/book-view.js"></script>
     <script src="./scripts/views/error-view.js"></script>

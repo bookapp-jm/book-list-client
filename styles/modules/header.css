@@ -9,6 +9,10 @@
   margin-right: 65px;
 }
 
-.icon-menu li {
+.icon-menu:hover li {
+  /* display: none; */
+}
+
+.nav-links {
   display: none;
 }

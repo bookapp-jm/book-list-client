@@ -25,12 +25,13 @@ header img {
   margin-right: 8px;
   float: left;
   width: 25px;
+  padding-top: 10px;
 }
 
 header h1 {
   text-align: center;
   float: left;
-  margin-top: 8px;
+  margin-top: 18px;
   display: inline-block;
 }
 
@@ -38,14 +39,6 @@ header span {
   display: inline;
   float: right;
   margin-right: -5px;
-}
-
-.icon-menu:before {
-  content: "\2630";
-  margin-left: 468px;
-  margin-top: 7px;
-  position: absolute;
-  /* transition: 2s; */
 }
 
 .codefellows {
@@ -72,7 +65,7 @@ button {
   color: white;
   display: block;
   margin-bottom: 50px;
-  margin-left: 486px;
+  margin-left: 438px;
   border-radius: 3px;
   border: solid 2px;
   border-color: #4A4A4A;
