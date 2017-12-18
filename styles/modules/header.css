@@ -9,6 +9,26 @@
   margin-right: 65px;
 }
 
+.icon-power:before {
+	content: "\e90a";
+}
+
 .icon-menu li {
-  display: none;
+  display: block;
+}
+
+.mobile-nav-items {
+  display: block;
+  width: 100%;
+}
+
+.icon-menu:hover + .mobile-nav-items {
+  display: block;
+}
+
+.icon-menu:hover + .mobile-nav-items li {
+  display: block;
+  margin-left: -5%;
+  border-bottom: 1px solid #ebdfaf;
+  padding: 1.5%;
 }
