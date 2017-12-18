@@ -14,11 +14,11 @@
 }
 
 .icon-menu li {
-  display: none;
+  display: block;
 }
 
 .mobile-nav-items {
-  display: none;
+  display: block;
   width: 100%;
 }
 
